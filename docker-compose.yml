@@ -43,3 +43,4 @@ services:
       - elasticsearch
     links:
       - elasticsearch
+    privileged: yes
