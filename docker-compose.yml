@@ -9,10 +9,7 @@ services:
 
 
   logstash:
-    image: logstash:latest
-    command: logstash -f /etc/logstash/conf.d/logstash.conf
-    volumes:
-      - ./logstash/config:/etc/logstash/conf.d
+    build: logstash/
     ports:
       - "5000:5000"
     depends_on:
@@ -23,8 +20,6 @@ services:
 
   kibana:
     build: kibana/
-    volumes:
-      - ./kibana/config/:/opt/kibana/config/
     ports:
       - "8080:5601"
     depends_on:
