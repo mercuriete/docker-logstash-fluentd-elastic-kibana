@@ -5,8 +5,11 @@ WARNING: If you are using user namespaces it doesn't work because fluentd needs 
 
 #Windows user with docker-toolbox
 
-I don't know how to get working the volumes.
-fluentd is not working on windows.
+just type:
+
+```
+export COMPOSE_CONVERT_WINDOWS_PATHS=1
+```
 
 # LICENSE
 WTF YOU WANT
